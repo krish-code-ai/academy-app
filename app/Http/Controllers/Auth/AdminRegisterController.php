@@ -43,7 +43,7 @@ class AdminRegisterController extends Controller
         event(new Registered($admin = $this->create($request->all())));
         // Auth::guard('admin')->login($admin);
         Auth::login($admin);
-        return redirect('/dashboard');
+        return redirect('/admin/dashboard');
 
     }
 

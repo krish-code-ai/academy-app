@@ -13,11 +13,11 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function getAdmin() {
-        $admin = Auth::guard('admin');
-        if($admin->check()) {
-            return $admin->user();
-        }
+        // $admin = Auth::guard('admin');
+        // if($admin->check()) {
+        //     return $admin->user();
+        // }
 
-        return null;
+        // return null;
     }
 }

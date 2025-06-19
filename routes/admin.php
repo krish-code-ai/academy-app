@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CourseController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Auth\AdminRegisterController;
@@ -33,4 +34,8 @@ Route::prefix('admin')->middleware('guest:admin')->group(function () {
 // Authenticated admin routes
 Route::prefix('admin')->middleware('auth:admin')->group(function () {
     Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+
+    Route::post('/logout', [AdminLoginController::class, 'logout'])->name('login.submit');
+
+    Route::resource('courses', CourseController::class);
 });
