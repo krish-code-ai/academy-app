@@ -59,12 +59,6 @@
             @endforeach
 
         </div>
-        <!-- <div class="row justify-content-center mt-5">
-                <div class="col-md-10 ftco-animate">
-                    <p><strong>When she reached</strong> the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-                    <p><span>Just Browsing?</span><a href="course.html"> View All Courses</a></p>
-                </div>
-            </div> -->
     </div>
 </section>
 
@@ -197,62 +191,22 @@
         <div class="row">
             <div class="col-md-12 ftco-animate">
                 <div class="carousel-testimony owl-carousel">
+                    @foreach($testimonials as $story)
                     <div class="item">
                         <div class="testimony-wrap text-center">
-                            <div class="user-img mb-5" style="background-image: url(images/person_1.jpg)">
+                            <div class="user-img mb-5" style="background-image: url('{{ $story->profile ? asset('storage/' . $story->profile) : asset('img/avatar5.png') }}')">
                                 <span class="quote d-flex align-items-center justify-content-center">
                                     <i class="icon-quote-left"></i>
                                 </span>
                             </div>
                             <div class="text">
-                                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                <p class="name">Dennis Green</p>
-                                <span class="position">CSE Student</span>
+                                <p class="mb-5">{{ $story->message }}</p>
+                                <p class="name">{{ ucwords($story->name) }}</p>
+                                <span class="position">{{ $story->professional }}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="testimony-wrap text-center">
-                            <div class="user-img mb-5" style="background-image: url(images/person_2.jpg)">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="icon-quote-left"></i>
-                                </span>
-                            </div>
-                            <div class="text">
-                                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                <p class="name">Dennis Green</p>
-                                <span class="position">Math Student</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap text-center">
-                            <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="icon-quote-left"></i>
-                                </span>
-                            </div>
-                            <div class="text">
-                                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                <p class="name">Dennis Green</p>
-                                <span class="position">Science Students</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="testimony-wrap text-center">
-                            <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
-                                <span class="quote d-flex align-items-center justify-content-center">
-                                    <i class="icon-quote-left"></i>
-                                </span>
-                            </div>
-                            <div class="text">
-                                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                <p class="name">Dennis Green</p>
-                                <span class="position">English Student</span>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

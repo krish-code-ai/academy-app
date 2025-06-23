@@ -31,7 +31,7 @@
             <div class="col-md-12">
                 <div class="card card-primary card-outline mb-4">
                     <div class="card-header">
-                        <div class="card-title">Quick Example</div>
+                        <div class="card-title">Course Create</div>
                     </div>
                     <form action="{{ route('admin.courses.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf

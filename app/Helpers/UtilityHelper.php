@@ -20,3 +20,11 @@ if (!function_exists('constant_list')) {
         return $result;
     }
 }
+
+if (!function_exists('image_to_base64')) {
+    function image_to_base64($url)
+    {
+        $image = file_get_contents($url);
+        return base64_encode($image);
+    }
+}

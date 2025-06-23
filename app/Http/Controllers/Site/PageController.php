@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use App\Models\Course;
+use Categories;
 use Illuminate\Http\Request;
+use SubCategories;
 
 class PageController extends Controller
 {
@@ -24,7 +27,10 @@ class PageController extends Controller
 
     public function get_courses()
     {
-        return view('site.pages.courses');
+        $categories = constant_list(Categories::class);
+        $subcategories = constant_list(SubCategories::class);
+        $courses = Course::where('status', 1)->paginate(6);
+        return view('site.pages.courses', compact('categories', 'subcategories', 'courses'));
     }
 
     public function get_student_life()

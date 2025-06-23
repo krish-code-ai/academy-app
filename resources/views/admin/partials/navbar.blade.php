@@ -20,8 +20,8 @@
                 data-lte-toggle="treeview"
                 role="menu"
                 data-accordion="false">
-                <li class="nav-item menu-open">
-                    <a href="#" class="nav-link active">
+                <li class="nav-item">
+                    <a href="{{url('admin/dashboard')}}" class="nav-link {{ Request::is('admin/dashboard') ? 'active' : '' }}">
                         <i class="nav-icon bi bi-speedometer"></i>
                         <p>
                             Dashboard
@@ -29,11 +29,33 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./generate/theme.html" class="nav-link">
+                    <a href="./generate/theme.html" class="nav-link {{ Request::is('admin/blogs') ? 'active' : '' }}">
                         <i class="nav-icon bi bi-palette"></i>
                         <p>Blogs</p>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{url('admin/courses')}}" class="nav-link {{ Request::is('admin/courses') ? 'active' : '' }}">
+                        <i class="nav-icon bi bi-book"></i>
+                        <p>Courses</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{url('admin/success_stories')}}" class="nav-link {{ Request::is('admin/success_stories') ? 'active' : '' }}">
+                        <i class="nav-icon bi bi-"></i>
+                        <p>Success Stories</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{url('admin/gallery')}}" class="nav-link {{ Request::is('admin/gallery') ? 'active' : '' }}">
+                        <i class="nav-icon bi bi-image"></i>
+                        <p>Gallery</p>
+                    </a>
+                </li>
+
 
             </ul>
             <!--end::Sidebar Menu-->
