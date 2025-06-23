@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\Gallery;
 use Categories;
 use Illuminate\Http\Request;
 use SubCategories;
@@ -35,12 +36,13 @@ class PageController extends Controller
 
     public function get_student_life()
     {
-        return view('site.pages.student_life');
+        $galleries = Gallery::latest()->get();
+        return view('site.pages.student_life', compact('galleries'));
     }
 
-    public function get_student_life_single()
+    public function get_student_life_single($id)
     {
-        return view('site.pages.single_gallery');
+        $gallery = Gallery::find($id);
+        return view('site.pages.single_gallery', compact('gallery'));
     }
-
 }

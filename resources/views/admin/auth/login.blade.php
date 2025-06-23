@@ -70,7 +70,7 @@
                     </div>
                     <!--end::Row-->
                 </form>
-                <p class="mb-1"><a href="forgot-password.html">I forgot my password</a></p>
+                <p class="mb-1"><a href="{{url('/admin/manual-password-reset')}}">I forgot my password</a></p>
                 <p class="mb-0">
                     <a href="{{ url('/admin/register') }}" class="text-center"> Register a new membership </a>
                 </p>

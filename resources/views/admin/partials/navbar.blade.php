@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="./generate/theme.html" class="nav-link {{ Request::is('admin/blogs') ? 'active' : '' }}">
+                    <a href="{{url('#')}}" class="nav-link {{ Request::is('admin/blogs') ? 'active' : '' }}">
                         <i class="nav-icon bi bi-palette"></i>
                         <p>Blogs</p>
                     </a>
@@ -44,7 +44,7 @@
 
                 <li class="nav-item">
                     <a href="{{url('admin/success_stories')}}" class="nav-link {{ Request::is('admin/success_stories') ? 'active' : '' }}">
-                        <i class="nav-icon bi bi-"></i>
+                        <i class="nav-icon bi bi-twitch"></i>
                         <p>Success Stories</p>
                     </a>
                 </li>
