@@ -9,7 +9,7 @@
                           <i class="bi bi-list"></i>
                       </a>
                   </li>
-                  <li class="nav-item d-none d-md-block"><a href="{{url('/')}}" class="nav-link">Go To Site</a></li>
+                  <li class="nav-item d-none d-md-block"><a href="{{url('/')}}" class="nav-link" target="_blank">Go To Site</a></li>
               </ul>
               <!--end::Start Navbar Links-->
               <!--begin::End Navbar Links-->
@@ -19,7 +19,7 @@
                   <li class="nav-item dropdown user-menu">
                       <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                           <img
-                              src="img/avatar5.png"
+                              src="{{ asset('admin/img/avatar5.png') }}"
                               class="user-image rounded-circle shadow"
                               alt="User Image" />
                           <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
@@ -28,7 +28,7 @@
                           <!--begin::User Image-->
                           <li class="user-header text-bg-primary">
                               <img
-                                  src="img/avatar5.png"
+                                  src="{{ asset('admin/img/avatar5.png') }}"
                                   class="rounded-circle shadow"
                                   alt="User Image" />
                               <p>

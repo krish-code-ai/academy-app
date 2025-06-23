@@ -17,85 +17,30 @@
 <section class="ftco-section">
     <div class="container">
         <div class="row">
+            @foreach ($courses as $course)
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="course align-self-stretch">
-                    <a href="#" class="img" style="background-image: url(images/course-1.jpg)"></a>
+                    <a href="#" class="img" style="background-image: url('{{ asset('storage/' . $course->picture) }}')"></a>
                     <div class="text p-4">
-                        <p class="category"><span>English</span> <span class="price">$250</span></p>
-                        <h3 class="mb-3"><a href="#">English for Tommorow</a></h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
+                        <p class="category">
+                            <span>{{ $categories[$course->category_id] ?? 'Uncategorized' }}</span>
+                            <span class="price">${{ $course->fee }}</span>
+                        </p>
+                        <h3 class="mb-3">
+                            <a href="#">{{ $course->title }}</a>
+                        </h3>
+                        <p>{{ \Illuminate\Support\Str::limit($course->description, 100) }}</p>
                         <p><a href="#" class="btn btn-primary">Enroll now!</a></p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="course align-self-stretch">
-                    <a href="#" class="img" style="background-image: url(images/course-2.jpg)"></a>
-                    <div class="text p-4">
-                        <p class="category"><span>Science</span> <span class="price">$250</span></p>
-                        <h3 class="mb-3"><a href="#">Computer Engineering</a></h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-                        <p><a href="#" class="btn btn-primary">Enroll now!</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="course align-self-stretch">
-                    <a href="#" class="img" style="background-image: url(images/course-3.jpg)"></a>
-                    <div class="text p-4">
-                        <p class="category"><span>Business</span> <span class="price">$250</span></p>
-                        <h3 class="mb-3"><a href="#">Business Studies</a></h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-                        <p><a href="#" class="btn btn-primary">Enroll now!</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="course align-self-stretch">
-                    <a href="#" class="img" style="background-image: url(images/course-4.jpg)"></a>
-                    <div class="text p-4">
-                        <p class="category"><span>English</span> <span class="price">$250</span></p>
-                        <h3 class="mb-3"><a href="#">English for Tommorow</a></h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-                        <p><a href="#" class="btn btn-primary">Enroll now!</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="course align-self-stretch">
-                    <a href="#" class="img" style="background-image: url(images/course-5.jpg)"></a>
-                    <div class="text p-4">
-                        <p class="category"><span>Science</span> <span class="price">$250</span></p>
-                        <h3 class="mb-3"><a href="#">Computer Engineering</a></h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-                        <p><a href="#" class="btn btn-primary">Enroll now!</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex ftco-animate">
-                <div class="course align-self-stretch">
-                    <a href="#" class="img" style="background-image: url(images/course-6.jpg)"></a>
-                    <div class="text p-4">
-                        <p class="category"><span>Business</span> <span class="price">$250</span></p>
-                        <h3 class="mb-3"><a href="#">Business Studies</a></h3>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name</p>
-                        <p><a href="#" class="btn btn-primary">Enroll now!</a></p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
         <div class="row mt-5">
             <div class="col text-center">
-                <div class="block-27">
-                    <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
-                    </ul>
+                <div class="d-flex justify-content-center mt-4">
+                    {{ $courses->links() }}
                 </div>
             </div>
         </div>
