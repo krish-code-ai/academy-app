@@ -4,10 +4,10 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Academy | Dashboard</title>
+    <title>CB Micro Campus | Dashboard</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Academy | Dashboard" />
+    <meta name="title" content="CB Micro Campus | Dashboard" />
     <meta name="author" content="ColorlibHQ" />
     <meta
         name="description"

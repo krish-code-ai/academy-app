@@ -2,11 +2,9 @@
     <!--begin::Sidebar Brand-->
     <div class="sidebar-brand">
         <!--begin::Brand Link-->
-        <a href="./index.html" class="brand-link">
-
-            <!--begin::Brand Text-->
-            <span class="brand-text fw-light">Academy</span>
-            <!--end::Brand Text-->
+        <a href="{{url('admin/dashboard')}}" class="brand-link">
+            <img src="{{ asset('site/images/logo_2.jpg') }}" alt="AdminLTE Logo" class="brand-image opacity-75 shadow">
+            <span class="brand-text fw-light">CB Micro Campus</span>
         </a>
         <!--end::Brand Link-->
     </div>

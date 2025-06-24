@@ -45,4 +45,9 @@ class PageController extends Controller
         $gallery = Gallery::find($id);
         return view('site.pages.single_gallery', compact('gallery'));
     }
+
+    public function get_register_from()
+    {
+        return view('site.pages.online_register');
+    }
 }

@@ -27,7 +27,7 @@
 <body class="login-page bg-body-secondary">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../index2.html"><b>Academy</b></a>
+            <a href="../index2.html"><b>CB Micro Campus</b></a>
         </div>
         <!-- /.login-logo -->
         @if ($errors->any())

@@ -4,7 +4,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Admin | Register Page</title>
+    <title>CB Micro Campus | Register Page</title>
     <link rel="stylesheet" href="{{ asset('admin/css/adminlte.css') }}">
 
 </head>
@@ -13,8 +13,10 @@
 
 <body class="register-page bg-body-secondary">
     <div class="register-box">
-        <div class="register-logo">
-            <a href="../index2.html"><b>Admin</b>LTE</a>
+        <div class="login-logo text-center">
+            <a href="{{ url('/') }}">
+                <img src="{{ asset('site/images/logo.png') }}" alt=" Logo" style="max-width: 200px;">
+            </a>
         </div>
         <!-- /.register-logo -->
         <div class="card">
@@ -53,7 +55,7 @@
                     <!--end::Row-->
                 </form>
                 <p class="mb-0">
-                    <a href="login.html" class="text-center"> I already have a membership </a>
+                    <a href="{{url('admin/login')}}" class="text-center"> I already have a membership </a>
                 </p>
             </div>
             <!-- /.register-card-body -->

@@ -4,8 +4,8 @@
         <div class="row mb-5">
             <div class="col-md-3">
                 <div class="ftco-footer-widget mb-4">
-                    <h2><a class="navbar-brand" href="index.html"><i class="flaticon-university"></i>Genius <br><small>University</small></a></h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <h2><a class="navbar-brand" href="{{url('/')}}"><img src="{{ asset('site/images/logo_2.jpg') }}" alt=" Logo" style="max-width: 80px;"></a></h2>
+                    <p>CB Micro Campus empowers communities with practical vocational training, offering skill-based courses to build careers, confidence, and self-reliance.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                         <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -44,10 +44,10 @@
                 <div class="ftco-footer-widget mb-4 ml-md-4">
                     <h2 class="ftco-heading-2">Site Links</h2>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="py-2 d-block">Home</a></li>
-                        <li><a href="#" class="py-2 d-block">About</a></li>
-                        <li><a href="#" class="py-2 d-block">Courses</a></li>
-                        <li><a href="#" class="py-2 d-block">Students' Life</a></li>
+                        <li><a href="{{ url('/') }}" class="py-2 d-block">Home</a></li>
+                        <li><a href="{{ url('/about-us') }}" class="py-2 d-block">About</a></li>
+                        <li><a href="{{ url('/courses') }}" class="py-2 d-block">Courses</a></li>
+                        <li><a href="{{ url('/student_life') }}" class="py-2 d-block">Students' Life</a></li>
                         <li><a href="#" class="py-2 d-block">Careers</a></li>
                     </ul>
                 </div>
@@ -71,7 +71,7 @@
                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;<script>
                         document.write(new Date().getFullYear());
-                    </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">Academy</a>
+                    </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="#" target="_blank">CB Micro Campus</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
         </div>
