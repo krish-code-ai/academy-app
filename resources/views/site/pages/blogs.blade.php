@@ -1,4 +1,8 @@
 @extends('site.index')
+@php
+    $title = 'Blogs';
+@endphp
+@section('title', $title)
 
 @section('content')
 

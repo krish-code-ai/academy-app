@@ -1,5 +1,10 @@
 @extends('site.index')
 
+@php
+    $title = 'About Us';
+@endphp
+@section('title', $title)
+
 @section('content')
 
 <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg'); background-attachment:fixed;">
@@ -19,7 +24,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container text-center">
-                    <h2 class="section_title">Welcome To Academy</h2>
+                    <h2 class="section_title">Welcome To CB Micro Campus</h2>
                     <div class="section_subtitle">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel gravida arcu Vestibulum</p>
                     </div>

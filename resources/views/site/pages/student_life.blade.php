@@ -1,4 +1,8 @@
 @extends('site.index')
+@php
+    $title = 'Student's Life Us';
+@endphp
+@section('title', $title)
 
 @section('content')
 

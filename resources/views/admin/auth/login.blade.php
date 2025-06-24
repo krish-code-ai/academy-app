@@ -4,17 +4,11 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Login Page</title>
+    <title>CB Micro Campus | Login Page</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="AdminLTE 4 | Login Page" />
+    <meta name="title" content="CB Micro Campus | Login Page" />
     <meta name="author" content="ColorlibHQ" />
-    <meta
-        name="description"
-        content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS." />
-    <meta
-        name="keywords"
-        content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard" />
 
     <!--begin::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href="{{ asset('admin/css/adminlte.css') }}">
@@ -26,8 +20,10 @@
 
 <body class="login-page bg-body-secondary">
     <div class="login-box">
-        <div class="login-logo">
-            <a href="../index2.html"><b>Academy</b></a>
+        <div class="login-logo text-center">
+            <a href="{{ url('/') }}">
+                <img src="{{ asset('site/images/logo.png') }}" alt=" Logo" style="max-width: 200px;">
+            </a>
         </div>
         <!-- /.login-logo -->
         @if ($errors->any())
